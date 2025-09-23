@@ -1,0 +1,119 @@
+/* Container */
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 4rem;
+}
+/* Section Title & Subtitle */
+/* Section Title & Subtitle */
+.section__title {
+  display: block;
+  text-align: center;
+  font-size: 2.5rem; /* bigger like h1 */
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+/* Decorative underline */
+.section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--first-color);
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.section__subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem; /* slightly bigger */
+  font-weight: 400;
+  color: var(--text-color-light);
+  margin-bottom: 2rem;
+  font-style: italic; /* softer look */
+}
+
+/* Image */
+.about__img {
+  width: 350px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
+/* Info Grid */
+.about__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: var(--mb-2);
+}
+
+/* Box */
+.about__box {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  transition: 0.3s;
+}
+
+.about__box:hover {
+  transform: translateY(-5px);
+  border-color: var(--first-color);
+}
+
+/* Icon */
+.about__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+/* Text */
+.about__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about__subtitle {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color-light);
+}
+
+/* Description */
+/* About Description */
+.about__description {
+  padding: 1.5rem 2rem; /* inner spacing */
+  margin-bottom: 2rem; /* space below */
+  border-left: 4px solid var(--first-color); /* decorative left border */
+  background-color: rgba(0, 0, 0, 0.02); /* light background */
+  border-radius: 0.75rem;
+
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify; /* neat alignment */
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .about__description {
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__info {
+    justify-content: center;
+  }
+}
